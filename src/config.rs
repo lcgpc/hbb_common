@@ -100,8 +100,8 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-pub const RENDEZVOUS_SERVERS: &[&str] = &["lecheng.mooo.com"];
-pub const RS_PUB_KEY: &str = "48I4fjdd2uCQJHQRDF1OmPd9sOafawc8rqVIheoCRzE=";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["ktv.net.dnsnet.cc"];
+pub const RS_PUB_KEY: &str = "sjyzZqN08tYi4Kjcv6FgYLXIpHa5xDVDGWEXh3T6WZ0=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
