@@ -81,6 +81,7 @@ lazy_static::lazy_static! {
         let mut map = HashMap::new();
         map.insert("disable-account".to_owned(), "Y".to_owned());
         map.insert("hide-network-settings".to_owned(), "Y".to_owned());
+        map.insert("hide-remote-printer-settings".to_owned(), "Y".to_owned());
         RwLock::new(map)
     };
     pub static ref BUILTIN_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
