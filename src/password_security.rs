@@ -22,7 +22,9 @@ pub enum ApproveMode {
 
 fn get_auto_password() -> String {
     let len = temporary_password_length();
-    if Config::get_bool_option(crate::config::keys::OPTION_ALLOW_NUMERNIC_ONE_TIME_PASSWORD) {
+    // 預設開啟數字密碼，當配置為空或未設定時
+    let allow_numeric = Config::get_option(crate::config::keys::OPTION_ALLOW_NUMERNIC_ONE_TIME_PASSWORD);
+    if allow_numeric.is_empty() || allow_numeric == "Y" {
         Config::get_auto_numeric_password(len)
     } else {
         Config::get_auto_password(len)
@@ -57,7 +59,7 @@ pub fn temporary_password_length() -> usize {
     } else if length == "10" {
         10
     } else {
-        6 // default
+        8 // default
     }
 }
 
