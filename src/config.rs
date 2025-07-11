@@ -70,6 +70,10 @@ lazy_static::lazy_static! {
         map.insert("enable-keyboard".to_owned(), "Y".to_owned());
         map.insert("enable-clipboard".to_owned(), "Y".to_owned());
         map.insert("enable-file-transfer".to_owned(), "Y".to_owned());
+        // 添加一次性密碼長度預設為8
+        map.insert("temporary-password-length".to_owned(), "8".to_owned());
+        // 添加數字一次性密碼預設開啟
+        map.insert("allow-numeric-one-time-password".to_owned(), "Y".to_owned());
         RwLock::new(map)
     };
     pub static ref OVERWRITE_SETTINGS: RwLock<HashMap<String, String>> = Default::default();
